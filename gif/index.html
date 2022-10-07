@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container_images {
+            padding: 3%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .images {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Поиск по гифкам</h1>
+    <div>
+        Поиск
+        <input type="text" id="gifSearch">
+        <button onclick="onSearch()">Искать</button>
+        <div class="container_images">
+            <img src="" id="firstGif" class="images">
+            <img src="" id="secondGif" class="images">
+            <img src="" id="thirdGif" class="images">
+            <img src="" id="fourthGif" class="images">
+            <img src="" id="fifthGif" class="images">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
