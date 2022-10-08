@@ -1,0 +1,20 @@
+.tel:invalid {
+    border: 1px solid rgb(244, 62, 62);
+}
+
+.tel:valid {
+    border: 1px solid green;
+}
+
+:checked+span {
+    color: green;
+    font-weight: bold;
+}
+
+.form {
+    padding: 30px;
+}
+
+input:required:valid {
+    border-color: blueviolet;
+}
