@@ -11,12 +11,15 @@ function checkValidity(input) {
     if (validity.patternMismatch) {errors.push('Неверный формат заполнения поля ' + input.placeholder); }
     if (validity.rangeOverflow) { errors.push('Максимальное значение не может быть больше, чем 90'); }
     if (validity.rangeUnderflow) {errors.push('Минимальное значение не может быть меньше, чем 18'); }
-    //!!!ВОТ ТУТ ВОПРОС!!!по проверкам ниже не поняла, как сделать, чтобы сообщение выводилось только 1 раз, а не для каждого инпута (я поняла, почему ошибки по этим проверкам несколько раз, потому что в функции в скобках стоит input - function checkValidity(input), но найти, как это исправить, я не успела
-    if (password.value.length <= 7) {
-        errors.push('Ваш пароль слишком короткий, задайте пароль не менее 8-ми символов');
-    }
-    if (password.value !== confirmPassword.value) {
-        errors.push('Введенные пароли не совпадают')
+    
+//сначала проверка на тип инпута для пароля - в ней остальные проверки на пароль
+    if (input.type == 'password') {
+        if (password.value.length <= 7) {
+            errors.push('Ваш пароль слишком короткий, задайте пароль не менее 8-ми символов');
+        }
+        if (password.value !== confirmPassword.value) {
+            errors.push('Введенные пароли не совпадают')
+        }
     }
     }
 
@@ -34,6 +37,8 @@ function checkAll() {
 }
 
 btnRegistration.addEventListener('click', checkAll);
+
+//ЗАДАНИЕ 21 НЕДЕЛИ ТУТ - ниже отправка данных формы на тестовый апи - https://httpbin.org/post
 btnRegistration.onclick = function (event) {
     event.preventDefault();
 
@@ -64,8 +69,7 @@ btnRegistration.onclick = function (event) {
     .catch(error => console.log(error));
 }
 
-
-
+//ниже из прошлого задания по подсветке полей и смене фона
 function colorMeName() {
     document.getElementById('firstName').style.backgroundColor = '#DCDCDC';
 }
