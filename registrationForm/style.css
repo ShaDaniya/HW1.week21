@@ -1,0 +1,26 @@
+.gradient-custom {
+    background: linear-gradient(to bottom right, rgb(156, 155, 238), rgb(136, 189, 232))
+}
+
+.item__star {
+    color: red;
+}
+
+#errorMessage,
+#errorMessageFirstName,
+#errorMessageLastName,
+#errorMessageEmail,
+#errorMessagePhoneNumber,
+#errorMessagePassword,
+#errorMessageShortPassword,
+#errorMessageConfirmPassword,
+#emptyGender,
+#errorDateOfBirth {
+    font-size: small;
+    color: red;
+}
+
+.password__suggestions {
+    padding-top: 10px;
+    font-size: x-small;
+}
